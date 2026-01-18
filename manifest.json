@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "RSVP Reader",
+  "version": "1.0.0",
+  "description": "Read selected text faster using RSVP (Rapid Serial Visual Presentation)",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting"
+  ],
+  "background": {
+    "scripts": ["background/service-worker.js"],
+    "type": "module"
+  },
+  "commands": {
+    "start-rsvp": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Start RSVP reading of selected text"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles/overlay.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rsvp-reader@example.com"
+    }
+  }
+}
