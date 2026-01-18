@@ -1,0 +1,33 @@
+{
+  "name": "rsvp-reader",
+  "version": "1.0.0",
+  "description": "Firefox extension for RSVP (Rapid Serial Visual Presentation) reading",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "web-ext": "web-ext"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "rsvp",
+    "reading"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^7.3.1",
+    "web-ext": "^9.2.0"
+  }
+}
