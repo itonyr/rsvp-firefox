@@ -1,0 +1,355 @@
+/* RSVP Reader Overlay Styles */
+
+.rsvp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: none;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* HUD - Top Left Stats */
+.rsvp-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.rsvp-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rsvp-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rsvp-label {
+  color: #9ca3af;
+}
+
+.rsvp-value {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.rsvp-progress-text {
+  color: #9ca3af;
+}
+
+.rsvp-status {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+  opacity: 0.5;
+}
+
+/* Top Right Controls */
+.rsvp-controls-top {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2147483648;
+  pointer-events: auto;
+}
+
+.rsvp-btn-icon {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-btn-icon:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.rsvp-btn-active {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* Settings Modal */
+.rsvp-settings {
+  position: absolute;
+  top: 5rem;
+  right: 1.5rem;
+  width: 18rem;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  z-index: 2147483649;
+  pointer-events: auto;
+  cursor: auto;
+}
+
+.rsvp-settings-title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.rsvp-settings-section {
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-settings-label {
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-settings-value {
+  color: #ffffff;
+  font-family: monospace;
+}
+
+.rsvp-slider {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.rsvp-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #dc2626;
+  cursor: pointer;
+}
+
+.rsvp-slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #dc2626;
+  cursor: pointer;
+  border: none;
+}
+
+.rsvp-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.rsvp-settings-help {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  padding-top: 1rem;
+  border-top: 1px solid #1f2937;
+}
+
+.rsvp-settings-help p {
+  margin: 0.25rem 0;
+}
+
+.rsvp-key {
+  color: #d1d5db;
+  font-family: monospace;
+}
+
+/* Main Display Area */
+.rsvp-display {
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-word-container {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.rsvp-word-left {
+  flex: 1;
+  text-align: right;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  white-space: pre;
+}
+
+@media (min-width: 768px) {
+  .rsvp-word-left {
+    font-size: 4.5rem;
+  }
+}
+
+.rsvp-word-anchor {
+  flex: none;
+  width: 0.7em;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #dc2626;
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .rsvp-word-anchor {
+    font-size: 4.5rem;
+  }
+}
+
+.rsvp-word-right {
+  flex: 1;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #9ca3af;
+  white-space: pre;
+}
+
+@media (min-width: 768px) {
+  .rsvp-word-right {
+    font-size: 4.5rem;
+  }
+}
+
+/* Progress Bar */
+.rsvp-progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.375rem;
+  background-color: #111827;
+}
+
+.rsvp-progress-bar {
+  height: 100%;
+  background-color: #dc2626;
+  transition: width 0.3s ease-out;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+/* Bottom Controls */
+.rsvp-controls-bottom {
+  position: absolute;
+  bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #9ca3af;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.rsvp-btn-seek {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-btn-seek:hover {
+  color: #ffffff;
+}
+
+.rsvp-icon-rotate {
+  transform: rotate(180deg);
+}
+
+.rsvp-btn-play {
+  padding: 1rem;
+  background-color: #1f2937;
+  border-radius: 9999px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-btn-play:hover {
+  background-color: #374151;
+}
+
+/* Red dot indicator (centered focal point) */
+.rsvp-overlay::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dc2626;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .rsvp-progress-bar {
+    transition: none;
+  }
+  
+  .rsvp-btn-icon,
+  .rsvp-btn-seek,
+  .rsvp-btn-play {
+    transition: none;
+  }
+}
